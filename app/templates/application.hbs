@@ -1,3 +1,56 @@
 <h2 id="title">Welcome to Ember</h2>
 
+
+{{#ui-accordion class="styled"}}
+  <div class="active title">
+    <i class="dropdown icon"></i>
+    What is a dog?
+  </div>
+  <div class="active content">
+    <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    What kinds of dogs are there?
+  </div>
+  <div class="content">
+    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    How do you acquire a dog?
+  </div>
+  <div class="content">
+    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+  </div>
+{{/ui-accordion}}
+
+{{#ui-modal name="profile" class="profile" onApprove=(action 'approveModal') onDeny=(action 'denyModal')}}
+  <i class="close icon"></i>
+  <div class="header">
+    Profile Picture
+  </div>
+  <div class="image content">
+    <div class="ui medium image">
+      <img src="http://semantic-ui.com/images/avatar/large/chris.jpg">
+    </div>
+    <div class="description">
+      <div class="ui header">We've auto-chosen a profile image for you.</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>Is it okay to use this photo?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+{{/ui-modal}}
+
+
 {{outlet}}
